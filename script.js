@@ -1,17 +1,23 @@
 document
   .getElementById('createMemeButton')
-  .addEventListener('click', function (event) {
-    const imageURL = document.getElementById('imageURL').value;
-    const topText = document.getElementById('topText').value;
-    const bottomText = document.getElementById('bottomText').value;
+  .addEventListener('click', function () {
+    const imageURL = document.getElementById('imageURL').value.trim();
+    const topText = document.getElementById('topText').value.trim();
+    const bottomText = document.getElementById('bottomText').value.trim();
 
-    if (imageURL !== '') {
-      createMeme(imageURL, topText, bottomText);
-    } else {
-      alert('Please enter an image URL');
+    // Retrieve error message container
+    const errorMessage = document.getElementById('error-message');
+    errorMessage.textContent = ''; // Clear any previous error message
+
+    // Check if any field is empty
+    if (imageURL === '' || topText === '' || bottomText === '') {
+      errorMessage.textContent = 'Please fill in all fields.';
+      return; // Stop further execution if fields are missing
     }
 
-    document.getElementById('memeForm').reset();
+    // Proceed with creating the meme if all fields are filled
+    createMeme(imageURL, topText, bottomText);
+    document.getElementById('memeForm').reset(); // Clear form fields after submission
     document.getElementById('imagePreview').src = 'Blackcat-Lilith.jpg'; // Clear the image preview after generating meme
   });
 

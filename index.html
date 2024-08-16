@@ -11,18 +11,18 @@
         <h1>Meme Generator</h1>
         <div id="imagePreviewContainer">
             <img id="imagePreview" src="Blackcat-Lilith.jpg" alt="Image Preview">
-        <div class="preview-title">Your Meme</div>
-        <div class="preview-subtitle">Does Not Impress Me</div>
+            <div class="preview-title">Your Meme</div>
+            <div class="preview-subtitle">Does Not Impress Me</div>
         </div>
 
         <form id="memeForm">
+            <div id="error-message" style="color: red; margin-bottom: 10px;"></div>
             <div class="input-container">
                 <input type="text" id="imageURL" placeholder="Enter image URL" />
                 <input type="text" id="topText" placeholder="Top Text" />
                 <input type="text" id="bottomText" placeholder="Bottom Text" />
             </div>
 
-            <!-- Button container for centering -->
             <div class="button-container">
                 <button type="button" id="createMemeButton">Create Meme</button>
             </div>
