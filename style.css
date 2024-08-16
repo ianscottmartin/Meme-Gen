@@ -24,7 +24,7 @@ h1 {
     text-shadow: 5px 5px 4px rgba(230, 83, 35, 0.1);
 }
 
-#imagePreviewContainer {
+#exampleContainer {
     position: relative;
     margin-bottom: 20px;
     max-width: 100%;
@@ -32,7 +32,7 @@ h1 {
     background-color: rgb(89, 48, 178);
 }
 
-#imagePreview {
+#example {
     max-width: 100%;
     height: auto;
     display: block;
@@ -41,30 +41,27 @@ h1 {
     object-fit: contain;
 }
 
-.preview-title,
-.preview-subtitle {
+.example-title,
+.example-subtitle {
     position: absolute;
     width: 100%;
     text-align: center;
-    color: rgb(226, 238, 55);
-    text-shadow: 5px 5px 4px rgb(12, 12, 12);
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(11, 5, 35);
+    text-shadow: 5px 5px 4px rgb(230, 248, 110);
     pointer-events: none;
     z-index: 10;
 }
 
-.preview-title {
+.example-title {
     top: 10px;
-    font-size: 40px;
-    font-weight: bold;
 }
 
-.preview-subtitle {
+.example-subtitle {
     bottom: 10px;
-    font-size: 40px;
-    font-weight: normal;
 }
 
-/* Form Styles */
 form {
     margin-bottom: 20px;
     background-color: #e0eb43;
@@ -93,8 +90,8 @@ input::placeholder {
 button {
     margin-top: 10px;
     background-color: #e0eb43;
-    color: rgb(5, 14, 5);
-    border: 1px solid rgb(5, 5, 5);
+    color: green;
+    border: 1px solid green;
     padding: 10px;
     cursor: pointer;
 }
@@ -112,8 +109,7 @@ button:focus {
     text-align: center;
 }
 
-/* Meme Container Styles */
-#memeContainer {
+.meme-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -124,6 +120,7 @@ button:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 300px;
     margin-bottom: 20px;
 }
 
@@ -174,27 +171,8 @@ button:focus {
     cursor: pointer;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .preview-title {
-        font-size: 30px;
-        top: 5px;
-    }
-
-    .preview-subtitle {
-        font-size: 20px;
-        bottom: 5px;
-    }
-}
-
-@media (max-width: 480px) {
-    .preview-title {
-        font-size: 24px;
-        top: 2px;
-    }
-
-    .preview-subtitle {
-        font-size: 16px;
-        bottom: 2px;
-    }
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
 }

@@ -9,14 +9,14 @@
 <body>
     <div class="container">
         <h1>Meme Generator</h1>
-        <div id="imagePreviewContainer">
-            <img id="imagePreview" src="https://images2.minutemediacdn.com/image/upload/c_fill,w_2160,ar_16:9,f_auto,q_auto,g_auto/shape%2Fcover%2Fsport%2Fe61935a7eb6f1f060b4bbb5d93a1b5d7a4aad5672ed2edbc616d94c7d665ffcf.jpg" alt="Image Preview">
-            <div class="preview-title">Feel The Power</div>
-            <div class="preview-subtitle">Of The Meme</div>
+        <div id="exampleContainer">
+            <img id="example" src="https://images2.minutemediacdn.com/image/upload/c_fill,w_2160,ar_16:9,f_auto,q_auto,g_auto/shape%2Fcover%2Fsport%2Fe61935a7eb6f1f060b4bbb5d93a1b5d7a4aad5672ed2edbc616d94c7d665ffcf.jpg" alt="Image Example">
+            <div class="example-title">Feel The Power</div>
+            <div class="example-subtitle">Of The Meme</div>
         </div>
 
         <form id="memeForm">
-            <div id="error-message" style="color: red; margin-bottom: 10px;"></div>
+            <div id="error-message" class="error-message"></div>
             <div class="input-container">
                 <input type="text" id="imageURL" placeholder="Enter image URL" />
                 <input type="text" id="topText" placeholder="Top Text" />
@@ -27,7 +27,7 @@
                 <button type="button" id="createMemeButton">Create Meme</button>
             </div>
         </form>
-        <div id="memeContainer"></div>
+        <div id="memeContainer" class="meme-container"></div>
     </div>
     <script src="script.js"></script>
 </body>

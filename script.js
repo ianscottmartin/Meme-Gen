@@ -1,6 +1,9 @@
 document
   .getElementById('createMemeButton')
-  .addEventListener('click', function () {
+  .addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Retrieve values from input fields
     const imageURL = document.getElementById('imageURL').value.trim();
     const topText = document.getElementById('topText').value.trim();
     const bottomText = document.getElementById('bottomText').value.trim();
@@ -12,14 +15,14 @@ document
     // Check if any field is empty
     if (imageURL === '' || topText === '' || bottomText === '') {
       errorMessage.textContent = 'Please fill in all fields.';
-      return; // Stop if fields are missing
+      return; // Stop further execution if fields are missing
     }
 
-    // Proceed with meme if all fields are filled
+    // Proceed with creating the meme if all fields are filled
     createMeme(imageURL, topText, bottomText);
-    document.getElementById('memeForm').reset(); // Clear form fields after submission
-    document.getElementById('imagePreview').src =
-      'https://images2.minutemediacdn.com/image/upload/c_fill,w_2160,ar_16:9,f_auto,q_auto,g_auto/shape%2Fcover%2Fsport%2Fe61935a7eb6f1f060b4bbb5d93a1b5d7a4aad5672ed2edbc616d94c7d665ffcf.jpg'; // Clear the image preview after generating meme
+
+    // Reset form fields
+    document.getElementById('memeForm').reset();
   });
 
 function createMeme(imageURL, topText, bottomText) {
