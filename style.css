@@ -90,8 +90,8 @@ input::placeholder {
 button {
     margin-top: 10px;
     background-color: #e0eb43;
-    color: green;
-    border: 1px solid green;
+    color: rgb(2, 5, 2);
+    border: 1px solid rgb(4, 11, 4);
     padding: 10px;
     cursor: pointer;
 }
