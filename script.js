@@ -18,7 +18,7 @@ document
     // Proceed with meme if all fields are filled
     createMeme(imageURL, topText, bottomText);
     document.getElementById('memeForm').reset(); // Clear form fields after submission
-    document.getElementById('imagePreview').src = 'Blackcat-Lilith.jpg'; // Clear the image preview after generating meme
+    document.getElementById('imagePreview').src = 'Darth Vader.jpg'; // Clear the image preview after generating meme
   });
 
 function createMeme(imageURL, topText, bottomText) {
