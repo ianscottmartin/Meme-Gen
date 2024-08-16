@@ -18,7 +18,8 @@ document
     // Proceed with meme if all fields are filled
     createMeme(imageURL, topText, bottomText);
     document.getElementById('memeForm').reset(); // Clear form fields after submission
-    document.getElementById('imagePreview').src = 'Darth Vader.jpg'; // Clear the image preview after generating meme
+    document.getElementById('imagePreview').src =
+      'https://images2.minutemediacdn.com/image/upload/c_fill,w_2160,ar_16:9,f_auto,q_auto,g_auto/shape%2Fcover%2Fsport%2Fe61935a7eb6f1f060b4bbb5d93a1b5d7a4aad5672ed2edbc616d94c7d665ffcf.jpg'; // Clear the image preview after generating meme
   });
 
 function createMeme(imageURL, topText, bottomText) {
