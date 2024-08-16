@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Meme Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Meme Generator</h1>
+        <div id="imagePreviewContainer">
+            <img id="imagePreview" src="Blackcat-Lilith.jpg" alt="Image Preview">
+        <div class="preview-title">Your Meme</div>
+        <div class="preview-subtitle">Does Not Impress Me</div>
+        </div>
+
+        <form id="memeForm">
+            <div class="input-container">
+                <input type="text" id="imageURL" placeholder="Enter image URL" />
+                <input type="text" id="topText" placeholder="Top Text" />
+                <input type="text" id="bottomText" placeholder="Bottom Text" />
+            </div>
+
+            <!-- Button container for centering -->
+            <div class="button-container">
+                <button type="button" id="createMemeButton">Create Meme</button>
+            </div>
+        </form>
+        <div id="memeContainer"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

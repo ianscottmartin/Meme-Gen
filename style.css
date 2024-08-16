@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+    font-family: papyrus, "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #3b1488;
+}
+
+.container {
+    max-width: 800px;
+    /* Adjust max-width */
+    margin: 20px auto;
+    /* Added margin to center container */
+    padding: 20px;
+    text-align: center;
+    background-color: #e0eb43;
+    /* /* Added background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Added box shadow */
+}
+
+h1 {
+    font-size: 50px;
+    text-shadow: 5px 5px 4px rgba(230, 83, 35, 0.1);
+}
+
+#imagePreviewContainer {
+    position: relative;
+    margin-bottom: 20px;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: rgb(89, 48, 178);
+}
+
+#imagePreview {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    max-height: calc(100vh - 300px);
+    object-fit: contain;
+}
+
+.preview-title,
+.preview-subtitle {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(11, 5, 35);
+    text-shadow: 5px 5px 4px rgb(230, 248, 110);
+    pointer-events: none;
+    z-index: 10;
+}
+
+.preview-title {
+    top: 10px;
+}
+
+.preview-subtitle {
+    bottom: 10px;
+}
+
+form {
+    margin-bottom: 20px;
+    background-color: #e0eb43;
+}
+
+.input-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+input {
+    width: 200px;
+    padding: 10px;
+    color: #333;
+    border: 1px solid #7d1111;
+    border-radius: 4px;
+    background-color: #e0eb43;
+}
+
+input::placeholder {
+    color: #010100;
+}
+
+button {
+    margin-top: 10px;
+    background-color: #e0eb43;
+    color: green;
+    border: 1px solid green;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d1d1d1;
+}
+
+button:focus {
+    outline: none;
+}
+
+.button-container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.meme-container-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    /* Added margin bottom for spacing between memes */
+}
+
+.meme {
+    position: relative;
+    max-width: 100%;
+    max-height: 300px;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.meme img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.top-text,
+.bottom-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.top-text {
+    top: 10px;
+}
+
+.bottom-text {
+    bottom: 10px;
+}
+
+.delete-button {
+    margin-top: 10px;
+    background-color: red;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
