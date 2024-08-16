@@ -1,4 +1,5 @@
-/* Base styles */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 body {
     font-family: papyrus, "Roboto", sans-serif;
     display: flex;
@@ -18,7 +19,57 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Flexbox adjustments */
+h1 {
+    font-size: 50px;
+    text-shadow: 5px 5px 4px rgba(230, 83, 35, 0.1);
+}
+
+#imagePreviewContainer {
+    position: relative;
+    margin-bottom: 20px;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: rgb(89, 48, 178);
+}
+
+#imagePreview {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    max-height: calc(100vh - 300px);
+    object-fit: contain;
+}
+
+.preview-title,
+.preview-subtitle {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: rgb(11, 5, 35);
+    text-shadow: 5px 5px 4px rgb(230, 248, 110);
+    pointer-events: none;
+    z-index: 10;
+}
+
+.preview-title {
+    top: 10px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.preview-subtitle {
+    bottom: 10px;
+    font-size: 40px;
+    font-weight: normal;
+}
+
+/* Form Styles */
+form {
+    margin-bottom: 20px;
+    background-color: #e0eb43;
+}
+
 .input-container {
     display: flex;
     flex-wrap: wrap;
@@ -27,13 +78,16 @@ body {
 }
 
 input {
-    width: 100%;
-    max-width: 200px;
+    width: 200px;
     padding: 10px;
     color: #333;
     border: 1px solid #7d1111;
     border-radius: 4px;
     background-color: #e0eb43;
+}
+
+input::placeholder {
+    color: #010100;
 }
 
 button {
@@ -56,6 +110,14 @@ button:focus {
 .button-container {
     margin-top: 10px;
     text-align: center;
+}
+
+/* Meme Container Styles */
+#memeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .meme-container-item {
@@ -112,27 +174,8 @@ button:focus {
     cursor: pointer;
 }
 
-/* Media Queries */
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-
-    input {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .button-container {
-        margin-top: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 40px;
-    }
-
     .preview-title {
         font-size: 30px;
         top: 5px;
@@ -142,13 +185,16 @@ button:focus {
         font-size: 20px;
         bottom: 5px;
     }
+}
 
-    .meme {
-        max-height: 200px;
+@media (max-width: 480px) {
+    .preview-title {
+        font-size: 24px;
+        top: 2px;
     }
 
-    .top-text,
-    .bottom-text {
-        font-size: 14px;
+    .preview-subtitle {
+        font-size: 16px;
+        bottom: 2px;
     }
 }

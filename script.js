@@ -12,10 +12,10 @@ document
     // Check if any field is empty
     if (imageURL === '' || topText === '' || bottomText === '') {
       errorMessage.textContent = 'Please fill in all fields.';
-      return; // Stop further execution if fields are missing
+      return; // Stop if fields are missing
     }
 
-    // Proceed with creating the meme if all fields are filled
+    // Proceed with meme if all fields are filled
     createMeme(imageURL, topText, bottomText);
     document.getElementById('memeForm').reset(); // Clear form fields after submission
     document.getElementById('imagePreview').src = 'Blackcat-Lilith.jpg'; // Clear the image preview after generating meme
